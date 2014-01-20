@@ -1,6 +1,6 @@
 {
-  "name": "application-name",
-  "version": "0.0.1",
+  "name": "lazada",
+  "version": "0.0.1-1",
   "private": true,
   "scripts": {
     "start": "node app.js"
@@ -12,6 +12,11 @@
     "htmlparser2": "~3.4.0",
     "cheerio": "~0.13.1",
     "async": "~0.2.9",
-    "underscore": "~1.5.2"
+    "underscore": "~1.5.2",
+    "request": "~2.33.0"
+  },
+  "subdomain": "dolbyzerr-lazada",
+  "engines": {
+    "node": "0.10.x"
   }
 }
