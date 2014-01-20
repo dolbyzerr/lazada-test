@@ -1,0 +1,22 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src='/javascripts/vendor/jquery-2.0.3.min.js')
+    script(src='/javascripts/vendor/underscore-min.js')
+    script(src='/javascripts/vendor/backbone-min.js')
+    script(src='/javascripts/vendor/spin.min.js')
+    script(src='/javascripts/vendor/ladda.min.js')
+
+    script(src='/javascripts/models/product.js')
+
+    script(src='/javascripts/collections/products.js')
+
+    script(src='/javascripts/views/productsView.js')
+    script(src='/javascripts/views/appView.js')
+
+    script(src='/javascripts/main.js')
+  body.start
+    div#loader.loader
+    block content

@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1 Compare two products from Lazada
+  form.request#request
+    div.request__pane
+      input.request__input.request__input1(type='text', value="http://www.lazada.com.my/tenko-t7x-7-dual-core-4gb-wifi-white-488489.html")
+      input.request__input.request__input2(type='text', value="http://www.lazada.com.my/samsung-galaxy-note-80-8-16gb-wifi3g-white-150998.html")
+    button.request__go.ladda-button(data-style='expand-right')
+      span.ladda-label Compare
+    div.request__error Error
+  div#result.result.table

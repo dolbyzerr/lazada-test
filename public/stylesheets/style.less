@@ -1,0 +1,149 @@
+@import "mixins.less";
+@import "vendor/ladda.min.css";
+@import "vendor/ladda-themeless.min.css";
+
+@red: #e74c3c;
+
+body {
+  padding: 0 50px 50px 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+h1{
+	height: 0;
+	opacity: 0;
+	padding-bottom: 0;
+	margin: 0;
+	.transition(all .3s);
+}
+.start{
+	h1{
+		line-height: 140%;
+		margin: 0;
+		height: 1.4em;
+		padding-bottom: .6em;
+		margin-top: 20%;
+		opacity: 1;
+	}
+}
+.loading{
+	.loader{
+		opacity: 1;
+	}
+}
+.loader{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	opacity: 0;
+	.transition(opacity .5s);
+}
+
+.request{
+	.clearfix();
+	&__input{
+		position: relative;
+		display: inline-block;
+		border: 2px solid #bdc3c7;
+		color: #34495e;
+		font-size: 15px;
+		line-height: 140%;
+		padding: 8px 12px;
+		height: 42px;
+		background-color: #fff;
+		border-radius: 6px;
+		box-sizing: border-box;
+		margin-left: -2px;
+		width: 50%;
+		.transition(border .25s linear);
+		&:focus{
+			z-index: 1;
+			border-color: #1abc9c;
+			outline: 0;
+			box-shadow: none;
+		}
+		&.error{
+			color: @red;
+			border-color: @red;
+		}
+	}
+	&__input1{
+		.border-right-radius(0);
+	}
+	&__input2{
+		.border-left-radius(0);
+		.border-right-radius(0);
+		border-right: 0;
+	}
+	&__pane{
+		float: left;
+		width: 100%;
+		margin-right: -120px;
+		box-sizing: border-box;
+		padding-right: 116px;
+	}
+	&__go{
+		float: right;
+		width: 120px;
+		height: 42px;
+		line-height: 42px;
+		padding: 0;
+		.border-left-radius(0);
+		&:focus{
+			outline: none;
+		}
+	}
+	&__error{
+		width: 100%;
+		font-size: 14px;
+		color: @red;
+		height: 16px;
+		line-height: 140%;
+		padding-left: 12px;
+		opacity: 0;
+		.transition(all .5s);
+		&.show{
+			opacity: 1;
+		}
+	}
+}
+
+.result{
+	.loading &{
+		opacity: .5;
+	}
+	font-size: 14px;
+	table{
+		border-spacing: 0;
+	}
+	th{
+		text-align: left;
+		vertical-align: top;
+		width: 20%;
+		padding: 9px 25px;
+	}
+	tr td{
+		border-bottom: 1px solid #eef0f0;
+		padding: 9px 25px;
+		width: 40%;
+		width: 40%;
+	}
+	tbody{
+		tr:hover{
+			td,th{
+				background: #f9fafb;
+			}
+		}
+	}
+	.name{
+		font-weight: bold;
+		display: block;
+	}
+	.price{
+		color: green;
+	}
+}
